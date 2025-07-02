@@ -19,8 +19,7 @@ const Home = () => {
         setNotes(res.data);
         setIsRateLimited(false);
       } catch (error) {
-        console.log("Error fetching notes", error);
-        console.log(error);
+        console.log("Error fetching notes:", error);
         if (error.response?.status === 429) {
           setIsRateLimited(true);
         } else {
